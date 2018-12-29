@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  align-items: center;
+  padding: 0 $size-gutter;
+}
+
+.header-left {
+  width: $size-sidebar;
+}
+
+.header-right {
+  flex: 1;
+  display: flex;
+}
+
+.header-link {
+  margin-right: 40px;
+}

@@ -1,0 +1,23 @@
+<header>
+  <div class="header-left">
+    <a href="/">
+      <h1>Genex Homes</h1>
+    </a>
+  </div>
+  <div class="header-right">
+    <nav>
+      <a class="header-link" href="/about">About</a>
+      <span class="header-link">Work</span>
+      <a class="header-link" href="/news">News</a>
+      <a class="header-link" href="/contact">Contact</a>
+    </nav>
+
+    <nav>
+      {% for project in site.projects %}
+        <a href="{{ project.url }}">
+          {{ project.name }}
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

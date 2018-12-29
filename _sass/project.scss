@@ -1,0 +1,12 @@
+.project {
+  display: flex;
+}
+
+.project-meta {
+  width: $size-sidebar;
+  text-transform: capitalize;
+
+  dt {
+    font-weight: 600;
+  }
+}
