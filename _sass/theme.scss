@@ -1,5 +1,22 @@
 @import "variables";
+@import "header";
+@import "page";
 
 body {
   font-family: $font-family;
+}
+
+.wrapper {
+  padding: 0 $size-gutter;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-red;
+  }
 }
