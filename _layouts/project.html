@@ -3,6 +3,22 @@ layout: default
 ---
 
 <section class="project">
+  <aside class="project-meta">
+    <h4>{{ page.location }}</h4>
+    <h4>{{ page.year }}</h4>
+
+    <dl>
+      <dt>Name</dt>
+      <dd>{{ page.name }}</dd>
+
+      <dt>Categories</dt>
+      <dd>{{ page.categories }}</dd>
+
+      <dt>Status</dt>
+      <dd>{{ page.status }}</dd>
+    </dl>
+  </aside>
+
   {{ content }}
 </section>
 
