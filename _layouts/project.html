@@ -12,7 +12,14 @@ layout: default
       <dd>{{ page.name }}</dd>
 
       <dt>Categories</dt>
-      <dd>{{ page.categories }}</dd>
+      <dd>
+        {% for cat in page.Categories %}
+          {% assign catObject = site.categories | where: 'title', cat | first %}
+          {% if catObject %}
+            {{ catObject.title }}
+          {% endif %}
+        {% endfor %}
+      </dd>
 
       <dt>Status</dt>
       <dd>{{ page.status }}</dd>
