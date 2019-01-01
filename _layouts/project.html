@@ -20,13 +20,15 @@ layout: default
 
 <section class="project">
   <aside class="project-meta">
-    <h4>{{ page.location }}</h4>
-    <h4>{{ page.year }}</h4>
+    <h1>{{ page.title }}</h1>
+
+    <h2>{{ page.location }} - {{ page.year }}</h2>
 
     <dl>
       <dt>Name</dt>
       <dd>{{ page.name }}</dd>
-
+    </dl>
+    <dl>
       <dt>Categories</dt>
       <dd>
         {% for cat in page.Categories %}
@@ -36,12 +38,15 @@ layout: default
           {% endif %}
         {% endfor %}
       </dd>
-
+    </dl>
+    <dl>
       <dt>Status</dt>
       <dd>{{ page.status }}</dd>
     </dl>
   </aside>
 
-  {{ content }}
+  <div class="project-content">
+    {{ content }}
+  </div>
 </section>
 
