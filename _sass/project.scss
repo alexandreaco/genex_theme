@@ -10,3 +10,36 @@
     font-weight: 600;
   }
 }
+
+.project-slideshow {
+  height: 500px;
+}
+
+.project-slideshow-controls {
+  display: flex;
+  justify-content: center;
+
+  & > div {
+    margin: 20px 7px 0 7px;
+    cursor: pointer;
+  }
+
+  & > div:hover {
+    color: $color-red;
+  }
+
+  & > .active {
+    font-weight: bold;
+    color: $color-red;
+  }
+}
+
+.slick-slide[aria-hidden=false] {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.slick-slide[aria-hidden=true] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}

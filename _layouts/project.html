@@ -2,6 +2,22 @@
 layout: default
 ---
 
+<div class="project-slideshow">
+  {% for image in page.images %}
+    <img src="{{ image }}" />
+  {% endfor %}
+</div>
+
+<div class="project-slideshow-controls">
+  {% for image in page.images %}
+    {% if forloop.first == true %}
+      <div data-go-to-slide={{ forloop.index }} class="active">{{ forloop.index }}</div>
+    {% else %}
+      <div data-go-to-slide={{ forloop.index }}>{{ forloop.index }}</div>
+    {% endif %}
+  {% endfor %}
+</div>
+
 <section class="project">
   <aside class="project-meta">
     <h4>{{ page.location }}</h4>
