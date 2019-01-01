@@ -2,9 +2,11 @@
 @import "header";
 @import "project";
 @import "page";
+@import "work";
 
 body {
   font-family: $font-family;
+  margin: 0;
 }
 
 .wrapper {

@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  /* Slick Slider */
   var slideshow = $('.project-slideshow').slick({
     infinite: true,
     speed: 300,
@@ -19,6 +20,16 @@ $(document).ready(function(){
   $("[data-go-to-slide]").click(function(el) {
     var slideIndex = $(el.target).data("go-to-slide")
     $('.project-slideshow').slick('slickGoTo', slideIndex, true);
+  });
+
+
+  /* Nav Dropdown */
+  $('[data-nav-button]').click(function(e) {
+    $('[data-nav]').addClass('active')
+  });
+
+  $('[data-nav-close]').click(function(e) {
+    $('[data-nav]').removeClass('active')
   });
 });
 

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<section class="work">
+  <div class="work-gallery">
+    {% for project in site.projects %}
+      <div class="work-item">
+        <a href="{{ project.url }}">
+          <img src="{{ project.image }}" />
+          <h4>{{ project.name }}</h4>
+          <h6>{{ project.location }} | {{ project.status }}</h6>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
