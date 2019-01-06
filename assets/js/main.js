@@ -4,12 +4,11 @@ $(document).ready(function(){
   var homeSlideshow = $('.home-slideshow').slick({
     infinite: true,
     speed: 1200,
-    slidesToShow: 1,
-    centerMode: true,
-    variableWidth: true,
     appendArrows: false,
     autoplay: true,
-    pauseOnHover: false
+    pauseOnHover: false,
+    fade: true,
+    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
   });
 
   var slideshow = $('.project-slideshow').slick({
