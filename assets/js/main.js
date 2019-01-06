@@ -1,6 +1,17 @@
 $(document).ready(function(){
 
   /* Slick Slider */
+  var homeSlideshow = $('.home-slideshow').slick({
+    infinite: true,
+    speed: 1200,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true,
+    appendArrows: false,
+    autoplay: true,
+    pauseOnHover: false
+  });
+
   var slideshow = $('.project-slideshow').slick({
     infinite: true,
     speed: 300,

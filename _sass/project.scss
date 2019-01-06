@@ -35,6 +35,16 @@
 .project-slideshow {
   height: 500px;
   margin-top: 45px;
+
+  .slick-slide[aria-hidden=false] {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .slick-slide[aria-hidden=true] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
 }
 
 .project-slideshow-controls {
@@ -54,16 +64,6 @@
     font-weight: bold;
     color: $color-red;
   }
-}
-
-.slick-slide[aria-hidden=false] {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
-.slick-slide[aria-hidden=true] {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .project-content {

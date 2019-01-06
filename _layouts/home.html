@@ -3,3 +3,9 @@ layout: default
 ---
 
 {{ content }}
+
+<div class="home-slideshow">
+  {% for slide in site.homeSlideshow %}
+    <img src="{{ slide.image }}" />
+  {% endfor %}
+</div>
