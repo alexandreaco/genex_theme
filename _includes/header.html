@@ -1,3 +1,17 @@
+<div data-nav class="header-dropdown">
+  <div class="header-dropdown-content">
+    <div data-nav-close>CLOSE</div>
+    <a class="header-link" href="/work">Work</a>
+    <nav>
+      {% for project in site.projects %}
+        <a href="{{ project.url }}">
+          {{ project.name }}
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
+
 <header>
   <div class="header-left">
     <a href="/">
@@ -6,18 +20,12 @@
   </div>
   <div class="header-right">
     <nav>
+      <!--<span data-nav-button class="header-link">Work</span>-->
+      <a class="header-link" href="/work">Work</a>
+      <a class="header-link" href="/services">Services</a>
       <a class="header-link" href="/about">About</a>
-      <span class="header-link">Work</span>
       <a class="header-link" href="/news">News</a>
       <a class="header-link" href="/contact">Contact</a>
-    </nav>
-
-    <nav>
-      {% for project in site.projects %}
-        <a href="{{ project.url }}">
-          {{ project.name }}
-        </a>
-      {% endfor %}
     </nav>
   </div>
 </header>

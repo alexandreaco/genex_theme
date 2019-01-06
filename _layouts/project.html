@@ -2,23 +2,61 @@
 layout: default
 ---
 
-<section class="project">
+<div class="project-slideshow">
+  {% for image in page.images %}
+    <img src="{{ image }}" />
+  {% endfor %}
+</div>
+
+<section class="inverse-wrapper project">
   <aside class="project-meta">
-    <h4>{{ page.location }}</h4>
-    <h4>{{ page.year }}</h4>
+    <h1>{{ page.title }}</h1>
+
+    <h2>{{ page.location }} - {{ page.year }}</h2>
 
     <dl>
       <dt>Name</dt>
       <dd>{{ page.name }}</dd>
-
+    </dl>
+    <dl>
       <dt>Categories</dt>
-      <dd>{{ page.categories }}</dd>
-
+      <dd>
+        {% for cat in page.Categories %}
+          {% assign catObject = site.categories | where: 'title', cat | first %}
+          {% if catObject %}
+            {{ catObject.title }}
+          {% endif %}
+        {% endfor %}
+      </dd>
+    </dl>
+    <dl>
       <dt>Status</dt>
       <dd>{{ page.status }}</dd>
     </dl>
   </aside>
 
-  {{ content }}
+  <div class="project-content">
+    {{ content }}
+  </div>
+</section>
+
+<section class="inverse-wrapper related-projects">
+  <h2>Related Work</h2>
+  <div class="work-gallery">
+    {% for project in page.Projects %}
+      {% assign projectObject = site.projects | where: 'title', project | first %}
+      {% if projectObject %}
+        <div class="work-item">
+          <a href="{{ projectObject.url }}">
+            <div class="work-image">
+              <img src="{{ projectObject.image }}" />
+              <h4 class="description">{{ projectObject.title }}</h4>
+            </div>
+            <h6>{{ projectObject.location }} | {{ projectObject.status }}</h6>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </section>
 

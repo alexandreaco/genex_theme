@@ -1,7 +1,31 @@
+/* Variables */
+
 $font-family: 'Assistant', sans-serif;
 
 $color-red: rgb(255, 82, 82);
 $color-black: #000;
+$color-white: #FFF;
+
+$color-lightest-gray: #F9F9F9;
+$color-light-gray: #F3F3F3;
+$color-gray: rgb(128, 128, 128);
+$color-dark-gray: #4D4D4D;
 
 $size-gutter: 30px;
 $size-sidebar: 300px;
+$size-line-height: 1.68em;
+
+
+$timing-ease-function: cubic-bezier(0.7, 0, 0.3, 1);
+
+/* Mixins */
+
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@mixin fade-in() {
+  animation: 2s cubic-bezier(0.7, 0, 0.3, 1) 0s 1 fade-in;
+}
+

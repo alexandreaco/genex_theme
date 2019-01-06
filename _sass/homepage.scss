@@ -1,0 +1,14 @@
+.home-slideshow {
+  @include fade-in;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+
+  .slick-slide {
+    object-fit: cover;
+    width: 100vw;
+  }
+}

@@ -2,13 +2,21 @@
 @import "header";
 @import "project";
 @import "page";
+@import "work";
+@import "homepage";
 
 body {
   font-family: $font-family;
+  margin: 0;
+  color: #404040;
 }
 
 .wrapper {
   padding: 0 $size-gutter;
+}
+
+.inverse-wrapper {
+  margin: 0 -30px;
 }
 
 a {

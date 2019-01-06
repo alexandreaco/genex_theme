@@ -1,7 +1,12 @@
 header {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   padding: 0 $size-gutter;
+
+  h1 {
+    margin: 22px 0 0 0;
+    font-size: 26px;
+  }
 }
 
 .header-left {
@@ -15,4 +20,20 @@ header {
 
 .header-link {
   margin-right: 40px;
+}
+
+.header-dropdown {
+  height: 0px;
+  overflow: hidden;
+  transition: height .667s ease-in-out;
+  background-color: #E0E1E2;
+  color: #404040;
+
+  &.active {
+    height: 120px;
+  }
+}
+
+.header-dropdown-content {
+  padding: 30px $size-gutter 40px $size-gutter;
 }
