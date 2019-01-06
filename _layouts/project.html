@@ -40,3 +40,23 @@ layout: default
   </div>
 </section>
 
+<section class="inverse-wrapper related-projects">
+  <h2>Related Work</h2>
+  <div class="work-gallery">
+    {% for project in page.Projects %}
+      {% assign projectObject = site.projects | where: 'title', project | first %}
+      {% if projectObject %}
+        <div class="work-item">
+          <a href="{{ projectObject.url }}">
+            <div class="work-image">
+              <img src="{{ projectObject.image }}" />
+              <h4 class="description">{{ projectObject.title }}</h4>
+            </div>
+            <h6>{{ projectObject.location }} | {{ projectObject.status }}</h6>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+

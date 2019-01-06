@@ -1,11 +1,14 @@
 .work-gallery {
   column-count: 2;
   column-gap: 45px;
-  margin-top: 45px;
+  margin: 45px auto 120px auto;
 }
 
 .work-item {
   height: 300px;
+  margin-bottom: 75px;
+  break-inside: avoid;
+  page-break-inside: avoid;
 
   img {
     width: 100%;
